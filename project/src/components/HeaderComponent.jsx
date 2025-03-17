@@ -36,7 +36,7 @@ const HeaderComponent = () => {
         {/* Navbar */}
         <div className="bg-white shadow w-full">
           <div className="container mx-auto flex justify-between items-center py-4 px-4">
-            <h1 className="text-xl font-semibold">Animated Drawer</h1>
+           
             <button
               className="text-gray-500 hover:text-gray-600"
               onClick={toggleSidebar}
