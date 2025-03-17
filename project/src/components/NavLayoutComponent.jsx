@@ -11,7 +11,7 @@ const NavLayoutComponent = () => {
       <main>
         <Outlet />
       </main>
-      <FooterComponent />
+      
     </div>
   );
 };
