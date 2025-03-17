@@ -1,9 +1,12 @@
-import CardItemComponent from "../components/CardItemComponent";
+import FooterComponent from "../components/FooterComponent"
 
 const HomePage = () => {
 
   return (
-    <CardItemComponent/>
+    <>
+    <div className="text-[red]">HomePage</div>
+    {<FooterComponent />}
+    </>
   )
 };
 export default HomePage;
