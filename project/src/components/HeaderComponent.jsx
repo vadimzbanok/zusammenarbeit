@@ -1,67 +1,95 @@
 
 
 import React, { useState } from 'react';
-
 const HeaderComponent = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <div className="flex h-screen bg-gray-100">
-      <div className={`md:flex flex-col w-64 bg-gray-800 ${isSidebarOpen ? 'block' : 'hidden'} md:block`}>
-        <div className="flex items-center justify-center h-16 bg-gray-900">
-          <span className="text-white font-bold uppercase">Sidebar</span>
-        </div>
-        <div className="flex flex-col flex-1 overflow-y-auto">
-          <nav className="flex-1 px-2 py-4 bg-gray-800">
-            <a href="#" className="flex items-center px-4 py-2 text-gray-100 hover:bg-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-              Dashboard
-            </a>
-            <a href="#" className="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-              Messages
-            </a>
-            <a href="#" className="flex items-center px-4 py-2 mt-2 text-gray-100 hover:bg-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
-              Settings
-            </a>
-          </nav>
-        </div>
-      </div>
-      {/* Main content */}
-      <div className="flex flex-col flex-1 overflow-y-auto">
-        <div className="flex items-center justify-between h-16 bg-white border-b border-gray-200">
-          <div className="flex items-center px-4">
-            <button onClick={toggleSidebar} className="text-gray-500 focus:outline-none focus:text-gray-700 md:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-            <input className="mx-4 w-full border rounded-md px-4 py-2" type="text" placeholder="Search" />
-          </div>
-          <div className="flex items-center pr-4">
-            <button className="flex items-center text-gray-500 hover:text-gray-700 focus:outline-none focus:text-gray-700">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l-7-7 7-7m5 14l7-7-7-7" />
-              </svg>
-            </button>
+    <div className="bg-gray-100">
+      <div className="h-screen flex overflow-hidden bg-gray-200">
+        {/* Sidebar */}
+        <div
+          className={`absolute bg-gray-800 text-white w-80 min-h-screen overflow-y-auto transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} ease-in-out duration-300`}
+          id="sidebar"
+        >
+          <div className="p-4">
+            <h1 className="text-2xl font-semibold">Sidebar</h1>
+            <ul className="mt-4">
+              <li className="mb-2">
+                <a href="#" className="block hover:text-indigo-400">Home</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="block hover:text-indigo-400">About</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="block hover:text-indigo-400">Services</a>
+              </li>
+              <li className="mb-2">
+                <a href="#" className="block hover:text-indigo-400">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
-        <div className="p-4">
-          <h1 className="text-2xl font-bold">Welcome to my dashboard!</h1>
-          <p className="mt-2 text-gray-600">This is an example dashboard using Tailwind CSS.</p>
+        {/* Content */}
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {/* Navbar */}
+          <div className="bg-white shadow">
+            <div className="container mx-auto">
+              <div className="flex justify-between items-center py-4 px-2">
+                <h1 className="text-xl font-semibold">Animated Drawer</h1>
+                <button
+                  className="text-gray-500 hover:text-gray-600"
+                  id="open-sidebar"
+                  onClick={toggleSidebar}
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          {/* Content Body */}
+          <div className="flex-1 overflow-auto p-4">
+            <h1 className="text-2xl font-semibold">Welcome to our website</h1>
+            <p>... Content goes here ...</p>
+          </div>
         </div>
       </div>
     </div>
   )
 }
 export default HeaderComponent
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
