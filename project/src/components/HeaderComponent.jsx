@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import image from '../../public/images/a-photo-of-a-modern-online-shopping-plat_wQ5C633bRNW_40SSBc7JYA_kSfrRdMSSIKof2RfGVLIwQ.jpeg'
 
 const HeaderComponent = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -37,9 +36,9 @@ const HeaderComponent = () => {
         {/* Navbar */}
         <div className="bg-white shadow w-full">
           <div className="container mx-auto flex justify-between items-center py-4 px-4">
-            {/* Fixed button to toggle sidebar */}
+           
             <button
-              className="fixed top-4 left-4 text-gray-500 hover:text-gray-600 z-10"
+              className="text-gray-500 hover:text-gray-600"
               onClick={toggleSidebar}
             >
               <svg
@@ -62,7 +61,7 @@ const HeaderComponent = () => {
         {/* Content Body */}
         <div className="flex-1 overflow-auto p-6 bg-gray-100">
           <h1 className="text-2xl font-semibold">Welcome to our website</h1>
-          <img src={image}>... Content goes here ...</img>
+          <p>... Content goes here ...</p>
         </div>
       </div>
     </div>
