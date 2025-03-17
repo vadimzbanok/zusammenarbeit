@@ -5,7 +5,7 @@ import NavLayoutComponent from "../components/NavLayoutComponent";
 const HomePage = () => {
   return (
     <>
-      <div className="text-[red]">HomePage</div>
+      <div className="text-[red]"></div>
       <NavLayoutComponent />
 
       <CardItemComponent />
