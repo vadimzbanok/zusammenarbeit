@@ -13,7 +13,7 @@ const HeaderComponent = () => {
       <div
         className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-80 transition-transform transform ${
           isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } ease-in-out duration-300`}
+        } ease-in-out duration-300 `}
       >
         <div className="p-4">
           <h1 className="text-2xl font-semibold">Sidebar</h1>
