@@ -1,6 +1,9 @@
+import CardItemComponent from "../components/CardItemComponent";
+
 const HomePage = () => {
+
   return (
-    <div className="text-[red]">HomePage</div>
+    <CardItemComponent/>
   )
-}
-export default HomePage
+};
+export default HomePage;
