@@ -7,6 +7,7 @@ import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage";
+import HeaderComponent from "./components/HeaderComponent";
 
 function App() {
   return (
