@@ -23,7 +23,7 @@ const HeaderComponent = () => {
               <a href="#" className="block hover:text-indigo-400">About</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">Services</a>
+              <a href="#" className="block hover:text-indigo-400">Products</a>
             </li>
             <li className="mb-2">
               <a href="#" className="block hover:text-indigo-400">Contact</a>
