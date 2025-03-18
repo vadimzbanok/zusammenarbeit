@@ -50,13 +50,13 @@ const HeaderComponent = () => {
         {/* Links and Cart Icon */}
         <div className="hidden lg:flex items-center space-x-6">
           {/* Navigation Links */}
-          <a href="#" className="text-white hover:text-2xl font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold no-underline">
             Home
           </a>
-          <a href="#" className="text-white hover:text-2xl font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold no-underline">
             Shop
           </a>
-          <a href="#" className="text-white hover:text-2xl font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold no-underline">
             Login
           </a>
 
@@ -85,16 +85,16 @@ const HeaderComponent = () => {
       {/* Mobile Menu */}
       <div className={`${isMenuOpen ? "block" : "hidden"} lg:hidden`}>
         <div className="flex flex-col items-center space-y-4 bg-blue-600 py-4">
-          <a key="home" href="#" className="text-white hover:text-2xl font-bold">
+          <a key="home" href="#" className="text-white hover:text-2xl font-bold no-underline">
             Home
           </a>
-          <a key="shop" href="#" className="text-white hover:text-2xl font-bold">
+          <a key="shop" href="#" className="text-white hover:text-2xl font-bold no-underline">
             Shop
           </a>
-          <a key="login" href="#" className="text-white hover:text-2xl font-bold">
+          <a key="login" href="#" className="text-white hover:text-2xl font-bold no-underline">
             Login
           </a>
-          <a key="cart" href="#" className="text-white hover:text-2xl font-bold">
+          <a key="cart" href="#" className="text-white hover:text-2xl font-bold no-underline">
             <svg
               className="w-6 h-6"
               fill="none"
