@@ -5,7 +5,7 @@ const productData = [
     "price": 109.95,
     "description": "Enjoy a seamless wireless experience with Apple AirPods. Fast connectivity, excellent sound quality, and a convenient charging case.",
     "category": "electronics",
-    "image": "public/images/products/airpods.jpeg",
+    "image": "images/products/airpods.jpeg",
     "rating": {
       "rate": 3.9,
       "count": 120
@@ -17,7 +17,7 @@ const productData = [
     "price": 22.3,
     "description": "Lightweight and durable backpack, perfect for daily use. Features multiple compartments and an ergonomic design.",
     "category": "accessories",
-    "image": "public/images/products/bag.jpeg",
+    "image": "images/products/bag.jpeg",
     "rating": {
       "rate": 4.1,
       "count": 259
@@ -29,7 +29,7 @@ const productData = [
     "price": 55.99,
     "description": "Genuine leather belt with an adjustable metal buckle. Perfect for an elegant or casual look.",
     "category": "accessories",
-    "image": "public/images/products/Bett.jpeg",
+    "image": "images/products/Bett.jpeg",
     "rating": {
       "rate": 4.7,
       "count": 500
@@ -41,7 +41,7 @@ const productData = [
     "price": 15.99,
     "description": "Stylish and durable men's boots, great for casual wear or outdoor adventures. Comfortable fit with a rugged sole.",
     "category": "men's clothing",
-    "image": "public/images/products/dame-boots.jpeg",
+    "image": "images/products/dame-boots.jpeg",
     "rating": {
       "rate": 2.1,
       "count": 430
@@ -53,7 +53,7 @@ const productData = [
     "price": 695,
     "description": "High-quality squeegee for streak-free window cleaning. Ergonomic handle for a comfortable grip.",
     "category": "home & kitchen",
-    "image": "public/images/products/fenster-wischer.jpeg",
+    "image": "images/products/fenster-wischer.jpeg",
     "rating": {
       "rate": 4.6,
       "count": 400
@@ -65,7 +65,7 @@ const productData = [
     "price": 168,
     "description": "Soft and warm hoodie made from premium materials. Perfect for casual wear or outdoor activities.",
     "category": "men's clothing",
-    "image": "public/images/products/green-hoodie.jpeg",
+    "image": "images/products/green-hoodie.jpeg",
     "rating": {
       "rate": 3.9,
       "count": 70
@@ -77,7 +77,7 @@ const productData = [
     "price": 9.99,
     "description": "Portable outdoor grill with a durable design. Ideal for BBQ parties, camping, and picnics.",
     "category": "outdoor",
-    "image": "public/images/products/grill.jpeg",
+    "image": "images/products/grill.jpeg",
     "rating": {
       "rate": 3,
       "count": 400
@@ -89,7 +89,7 @@ const productData = [
     "price": 10.99,
     "description": "Premium quality cookware set made from stainless steel. Perfect for everyday cooking needs.",
     "category": "home & kitchen",
-    "image": "public/images/products/herde.jpeg",
+    "image": "images/products/herde.jpeg",
     "rating": {
       "rate": 1.9,
       "count": 100
@@ -101,7 +101,7 @@ const productData = [
     "price": 64,
     "description": "Elegant wooden dresser with multiple drawers for organized storage. Perfect for bedrooms and living spaces.",
     "category": "furniture",
-    "image": "public/images/products/kommode.jpeg",
+    "image": "images/products/kommode.jpeg",
     "rating": {
       "rate": 3.3,
       "count": 203
@@ -113,7 +113,7 @@ const productData = [
     "price": 109,
     "description": "Spacious and energy-efficient refrigerator with adjustable shelves. Ideal for keeping food fresh and organized.",
     "category": "home appliances",
-    "image": "public/images/products/kuhlschrank.jpeg",
+    "image": "images/products/kuhlschrank.jpeg",
     "rating": {
       "rate": 2.9,
       "count": 470
@@ -125,7 +125,7 @@ const productData = [
     "price": 109,
     "description": "High-performance Lenovo laptop with a sleek design. Perfect for work, study, or entertainment.",
     "category": "electronics",
-    "image": "public/images/products/lenovo.jpeg",
+    "image": "images/products/lenovo.jpeg",
     "rating": {
       "rate": 4.8,
       "count": 319
@@ -137,7 +137,7 @@ const productData = [
     "price": 114,
     "description": "Comfortable and stylish men's sweater, perfect for cold weather. Soft fabric with a modern fit.",
     "category": "men's clothing",
-    "image": "public/images/products/men-sweater.jpeg",
+    "image": "images/products/men-sweater.jpeg",
     "rating": {
       "rate": 4.8,
       "count": 400
@@ -149,7 +149,7 @@ const productData = [
     "price": 599,
     "description": "Casual and breathable men's t-shirt. Ideal for everyday wear with a comfortable fit.",
     "category": "men's clothing",
-    "image": "public/images/products/men-t-shirt.jpeg",
+    "image": "images/products/men-t-shirt.jpeg",
     "rating": {
       "rate": 2.9,
       "count": 250
@@ -161,7 +161,7 @@ const productData = [
     "price": 999.99,
     "description": "Elegant necklace with a beautiful pendant. Perfect for special occasions or daily wear.",
     "category": "jewelry",
-    "image": "public/images/products/necklace.jpeg",
+    "image": "images/products/necklace.jpeg",
     "rating": {
       "rate": 2.2,
       "count": 140
@@ -173,7 +173,7 @@ const productData = [
     "price": 56.99,
     "description": "Warm and stylish parka jacket with a faux fur hood. Ideal for winter and cold weather.",
     "category": "women's clothing",
-    "image": "public/images/products/parka.jpeg",
+    "image": "images/products/parka.jpeg",
     "rating": {
       "rate": 2.6,
       "count": 235
@@ -185,7 +185,7 @@ const productData = [
     "price": 29.95,
     "description": "Trendy and protective sunglasses for women. UV protection with a stylish frame design.",
     "category": "accessories",
-    "image": "public/images/products/sunglasses.jpeg",
+    "image": "images/products/sunglasses.jpeg",
     "rating": {
       "rate": 2.9,
       "count": 340
@@ -197,7 +197,7 @@ const productData = [
     "price": 39.99,
     "description": "Lightweight and powerful tablet, perfect for work, entertainment, and study. High-resolution display and fast performance.",
     "category": "electronics",
-    "image": "public/images/products/tablet.jpeg",
+    "image": "images/products/tablet.jpeg",
     "rating": {
       "rate": 3.8,
       "count": 679
@@ -209,7 +209,7 @@ const productData = [
     "price": 9.85,
     "description": "High-definition Smart TV with streaming capabilities. Enjoy your favorite shows with crisp visuals and clear sound.",
     "category": "electronics",
-    "image": "public/images/products/tv.jpeg",
+    "image": "images/products/tv.jpeg",
     "rating": {
       "rate": 4.7,
       "count": 130
@@ -221,7 +221,7 @@ const productData = [
     "price": 7.95,
     "description": "Elegant black and white dress for formal or casual occasions. Comfortable and stylish fit.",
     "category": "women's clothing",
-    "image": "public/images/products/white-and-black-dress.jpeg",
+    "image": "images/products/white-and-black-dress.jpeg",
     "rating": {
       "rate": 4.5,
       "count": 146
@@ -233,7 +233,7 @@ const productData = [
     "price": 7.95,
     "description": "Stylish and comfortable women's trousers, perfect for casual or office wear. Designed with a modern fit for elegance and ease.",
     "category": "women's clothing",
-    "image": "public/images/products/woman-trousers.jpeg",
+    "image": "images/products/woman-trousers.jpeg",
     "rating": {
       "rate": 4.5,
       "count": 146
