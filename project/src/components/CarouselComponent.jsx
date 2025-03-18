@@ -61,7 +61,7 @@ const CarouselComponent = () => {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 70vh;
+          height: 55vh;
           position: relative;
           overflow: hidden;
           margin-top: 20px;
