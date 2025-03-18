@@ -17,10 +17,7 @@ const productData = [
 const CarouselComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? productData.length - 1 : prev - 1));
-  };
-
+ 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === productData.length - 1 ? 0 : prev + 1));
   };
