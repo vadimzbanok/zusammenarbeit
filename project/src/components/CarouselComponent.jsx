@@ -1,54 +1,70 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const images = [
-  "/images/carousel/1.jpg", 
-  "/images/carousel/2.jpg",
+const productData = [
+  { id: 1, image: "./images/carousel/1.jpg" },
+  { id: 2, image: "./images/carousel/2.jpg" },
+  { id: 3, image: "./images/carousel/3.jpg" },
+  { id: 4, image: "./images/carousel/4.jpg" },
+  { id: 5, image: "./images/carousel/5.jpg" },
+  { id: 6, image: "./images/carousel/6.jpg" },
+  { id: 7, image: "./images/carousel/7.jpg" },
+  { id: 8, image: "./images/carousel/8.jpg" },
+  { id: 9, image: "./images/carousel/9.jpg" },
+  { id: 10, image: "./images/carousel/10.jpg" },
 ];
 
 const CarouselComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const prevSlide = () => {
-    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    setCurrentIndex((prev) => (prev === 0 ? productData.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    setCurrentIndex((prev) => (prev === productData.length - 1 ? 0 : prev + 1));
   };
+
+  useEffect(() => {
+    const interval = setInterval(nextSlide, 3000);
+    return () => clearInterval(interval);
+  }, [currentIndex]);
 
   return (
     <div className="carousel-container">
       <div className="carousel">
         <AnimatePresence mode="wait">
-          <motion.div
-            key={currentIndex}
-            initial={{ opacity: 0, scale: 0.8, x: 100 }}
-            animate={{ opacity: 1, scale: 1, x: 0 }}
-            exit={{ opacity: 0, scale: 0.8, x: -100 }}
-            transition={{ duration: 0.5, ease: "easeInOut" }}
-            className="carousel-item"
-          >
-            <img
-              src={images[currentIndex]}
-              alt={`Carousel Image ${currentIndex + 1}`}
-              className="carousel-img"
-            />
-          </motion.div>
+          {productData.map(
+            (item, index) =>
+              index === currentIndex && (
+                <motion.div
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.8, x: 100 }}
+                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  exit={{ opacity: 0, scale: 0.8, x: -100 }}
+                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                >
+                  <img
+                    src={item.image}
+                    alt={`Slide ${index + 1}`}
+                    className="carousel-img"
+                    onError={(e) => (e.target.src = "./images/placeholder.jpg")}
+                  />
+                </motion.div>
+              )
+          )}
         </AnimatePresence>
       </div>
-      <button className="prev-btn" onClick={prevSlide}>❮</button>
-      <button className="next-btn" onClick={nextSlide}>❯</button>
 
       <style>{`
         .carousel-container {
           display: flex;
           justify-content: center;
           align-items: center;
-          height: 100vh;
-          margin: 0;
+          height: 55vh;
           position: relative;
           overflow: hidden;
+          margin-top: 20px;
           width: 100%;
         }
 
@@ -57,55 +73,18 @@ const CarouselComponent = () => {
           justify-content: center;
           align-items: center;
           position: relative;
-          width: 350px;
-          height: 450px;
+          width: 80vw;
+          max-width: 1000px;
         }
 
-        .carousel-item {
-          position: absolute;
-          width: 320px;
-          height: 350px;
-          background: white;
-          border-radius: 20px;
-          padding: 15px;
-          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-          text-align: center;
-        }
+        
 
         .carousel-img {
-          width: 100%;
-          height: 100%;
+        
+          max-width: 900px;
+          height: auto;
           object-fit: cover;
           border-radius: 12px;
-          display: block;
-        }
-
-        .prev-btn,
-        .next-btn {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          background: rgba(0, 0, 0, 0.6);
-          color: white;
-          border: none;
-          font-size: 26px;
-          cursor: pointer;
-          padding: 12px;
-          border-radius: 50%;
-          transition: background 0.3s;
-        }
-
-        .prev-btn {
-          left: 15px;
-        }
-
-        .next-btn {
-          right: 15px;
-        }
-
-        .prev-btn:hover,
-        .next-btn:hover {
-          background: black;
         }
       `}</style>
     </div>
