@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import Bootstrap CSS
+import productData from "../utilities/data.js";
 
 const CardItemComponent = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch(productData)
       .then((response) => response.json())
       .then((data) => setData(data));
   }, []);
@@ -13,7 +14,7 @@ const CardItemComponent = () => {
   return (
     <div className="container mt-4   ">
       <div className="row">
-        {data.map((item) => (
+        {productData.map((item) => (
           <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div className="card d-flex flex-column h-100">
               <img
