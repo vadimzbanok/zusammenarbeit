@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '/logo.svg';
 
 const HeaderComponent = () => {
 
@@ -9,12 +10,14 @@ const HeaderComponent = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <div className="text-white font-bold text-xl">
-          <a href="#">Logo</a>
-        </div>
+        
+        <img className="logo"
+              src={logo}
+              alt="Logo"/>
+       
 
         {/* Hamburger Icon for Mobile */}
         <div className="lg:hidden flex items-center">
@@ -51,14 +54,14 @@ const HeaderComponent = () => {
         {/* Links and Cart Icon */}
         <div className="hidden lg:flex items-center space-x-6">
           {/* Navigation Links */}
-          <a href="#" className="text-white hover:text-indigo-400">
+          <a href="#" className="text-white hover:text-indigo-400 font-bold">
             Home
           </a>
-          <a href="#" className="text-white hover:text-indigo-400">
+          <a href="#" className="text-white hover:text-indigo-400 font-bold">
             Shop
           </a>
-          <a href="#" className="text-white hover:text-indigo-400">
-            About
+          <a href="#" className="text-white hover:text-indigo-400 font-bold">
+            Login
           </a>
 
           {/* Cart Icon */}
@@ -91,16 +94,16 @@ const HeaderComponent = () => {
             placeholder="Suche..."
             className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
-          <a href="#" className="text-white hover:text-indigo-400">
+          <a key="home" href="#" className="text-white hover:text-indigo-400">
             Home
           </a>
-          <a href="#" className="text-white hover:text-indigo-400">
+          <a key="shop" href="#" className="text-white hover:text-indigo-400">
             Shop
           </a>
-          <a href="#" className="text-white hover:text-indigo-400">
-            About
+          <a key="login" href="#" className="text-white hover:text-indigo-400">
+            Login
           </a>
-          <a href="#" className="text-white hover:text-indigo-400">
+          <a key="cart" href="#" className="text-white hover:text-indigo-400">
             <svg
               className="w-6 h-6"
               fill="none"
