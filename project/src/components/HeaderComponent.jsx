@@ -13,12 +13,17 @@ const HeaderComponent = () => {
     <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        
-        <img className="logo"
-              src={logo}
-              alt="Logo"/>
-       
 
+        <img className="logo" src={logo} alt="Logo" />
+
+        {/* Search Field for Desktop */}
+        <div className="lg:flex items-center space-x-2">
+          <input
+            type="text"
+            placeholder="Suche..."
+            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
         {/* Hamburger Icon for Mobile */}
         <div className="lg:hidden flex items-center">
           <button
@@ -42,25 +47,16 @@ const HeaderComponent = () => {
           </button>
         </div>
 
-        {/* Search Field for Desktop */}
-        <div className="hidden lg:flex items-center space-x-2">
-          <input
-            type="text"
-            placeholder="Suche..."
-            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
-
         {/* Links and Cart Icon */}
         <div className="hidden lg:flex items-center space-x-6">
           {/* Navigation Links */}
-          <a href="#" className="text-white hover:text-indigo-400 font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold">
             Home
           </a>
-          <a href="#" className="text-white hover:text-indigo-400 font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold">
             Shop
           </a>
-          <a href="#" className="text-white hover:text-indigo-400 font-bold">
+          <a href="#" className="text-white hover:text-2xl font-bold">
             Login
           </a>
 
@@ -87,23 +83,18 @@ const HeaderComponent = () => {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
-        <div className="flex flex-col items-center space-y-4 bg-gray-800 py-4">
-          <input
-            type="text"
-            placeholder="Suche..."
-            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-          <a key="home" href="#" className="text-white hover:text-indigo-400">
+      <div className={`${isMenuOpen ? "block" : "hidden"} lg:hidden`}>
+        <div className="flex flex-col items-center space-y-4 bg-blue-600 py-4">
+          <a key="home" href="#" className="text-white hover:text-2xl font-bold">
             Home
           </a>
-          <a key="shop" href="#" className="text-white hover:text-indigo-400">
+          <a key="shop" href="#" className="text-white hover:text-2xl font-bold">
             Shop
           </a>
-          <a key="login" href="#" className="text-white hover:text-indigo-400">
+          <a key="login" href="#" className="text-white hover:text-2xl font-bold">
             Login
           </a>
-          <a key="cart" href="#" className="text-white hover:text-indigo-400">
+          <a key="cart" href="#" className="text-white hover:text-2xl font-bold">
             <svg
               className="w-6 h-6"
               fill="none"
