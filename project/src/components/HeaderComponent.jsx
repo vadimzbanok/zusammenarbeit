@@ -1,77 +1,128 @@
 import React, { useState } from 'react';
 
 const HeaderComponent = () => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <div className="w-full h-screen flex">
-      {/* Sidebar */}
-      <div
-<<<<<<< HEAD
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-80 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} ease-in-out duration-300`}
-=======
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-80 transition-transform transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } ease-in-out duration-300 `}
->>>>>>> a8b015208f77b430efecf0f4479664897a21c429
-      >
-        <div className="p-4">
-          <h1 className="text-2xl font-semibold">Sidebar</h1>
-          <ul className="mt-4">
-            <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">Home</a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">About</a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">Products</a>
-            </li>
-            <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">Contact</a>
-            </li>
-          </ul>
+    <nav className="bg-gray-800 p-4">
+      <div className="container mx-auto flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-white font-bold text-xl">
+          <a href="#">Logo</a>
         </div>
-      </div>
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col h-screen overflow-hidden">
-        {/* Navbar */}
-        <div className="bg-white shadow w-full">
-          <div className="container mx-auto flex justify-between items-center py-4 px-4">
-           
-            <button
-              className="text-gray-500 hover:text-gray-600"
-              onClick={toggleSidebar}
+
+        {/* Hamburger Icon for Mobile */}
+        <div className="lg:hidden flex items-center">
+          <button
+            onClick={toggleMenu}
+            className="text-white focus:outline-none"
+          >
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              </svg>
-            </button>
-          </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
         </div>
-        {/* Content Body */}
-        <div className="flex-1 overflow-auto p-6 bg-gray-100">
-          <h1 className="text-2xl font-semibold">Welcome to our website</h1>
-          <p>... Content goes here ...</p>
+
+        {/* Search Field for Desktop */}
+        <div className="hidden lg:flex items-center space-x-2">
+          <input
+            type="text"
+            placeholder="Suche..."
+            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+        </div>
+
+        {/* Links and Cart Icon */}
+        <div className="hidden lg:flex items-center space-x-6">
+          {/* Navigation Links */}
+          <a href="#" className="text-white hover:text-indigo-400">
+            Home
+          </a>
+          <a href="#" className="text-white hover:text-indigo-400">
+            Shop
+          </a>
+          <a href="#" className="text-white hover:text-indigo-400">
+            About
+          </a>
+
+          {/* Cart Icon */}
+          <a href="#" className="text-white hover:text-indigo-400">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 3h18l-1.68 8.39a2 2 0 01-1.97 1.61H7.65a2 2 0 01-1.97-1.61L4 3H3z"
+              />
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+            </svg>
+          </a>
         </div>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:hidden`}>
+        <div className="flex flex-col items-center space-y-4 bg-gray-800 py-4">
+          <input
+            type="text"
+            placeholder="Suche..."
+            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          />
+          <a href="#" className="text-white hover:text-indigo-400">
+            Home
+          </a>
+          <a href="#" className="text-white hover:text-indigo-400">
+            Shop
+          </a>
+          <a href="#" className="text-white hover:text-indigo-400">
+            About
+          </a>
+          <a href="#" className="text-white hover:text-indigo-400">
+            <svg
+              className="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 3h18l-1.68 8.39a2 2 0 01-1.97 1.61H7.65a2 2 0 01-1.97-1.61L4 3H3z"
+              />
+              <circle cx="9" cy="21" r="1" />
+              <circle cx="20" cy="21" r="1" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </nav>
   );
 };
+  
 
 export default HeaderComponent;
