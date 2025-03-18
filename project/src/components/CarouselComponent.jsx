@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const images = [
-  "/images/carousel/1.jpg",
+  "/images/carousel/1.jpg", 
   "/images/carousel/2.jpg",
 ];
 
