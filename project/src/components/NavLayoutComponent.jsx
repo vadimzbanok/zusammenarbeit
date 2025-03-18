@@ -8,7 +8,7 @@ const NavLayoutComponent = () => {
       <NavLink>
         <HeaderComponent />
       </NavLink>
-      <main>
+      <main  >
         <Outlet />
       </main>
       

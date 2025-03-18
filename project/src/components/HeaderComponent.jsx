@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const HeaderComponent = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -8,47 +8,37 @@ const HeaderComponent = () => {
   };
 
   return (
-    <div className="w-full  flex">
+    <div className="w-full h-screen flex">
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-80 transition-transform transform ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-        } ease-in-out duration-300`}
+        className={`fixed top-0 left-0 h-full bg-gray-800 text-white w-80 transition-transform transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'} ease-in-out duration-300`}
       >
         <div className="p-4">
           <h1 className="text-2xl font-semibold">Sidebar</h1>
           <ul className="mt-4">
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
-                Home
-              </a>
+              <a href="#" className="block hover:text-indigo-400">Home</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
-                About
-              </a>
+              <a href="#" className="block hover:text-indigo-400">About</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
-                Services
-              </a>
+              <a href="#" className="block hover:text-indigo-400">Products</a>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
-                Contact
-              </a>
+              <a href="#" className="block hover:text-indigo-400">Contact</a>
             </li>
           </ul>
         </div>
       </div>
       {/* Main Content */}
-      <div className="flex-1 flex flex-col  overflow-hidden">
+      <div className="flex-1 flex flex-col h-screen overflow-hidden">
         {/* Navbar */}
-        <div className="bg-white  w-full">
+        <div className="bg-white shadow w-full">
           <div className="container mx-auto flex justify-between items-center py-4 px-4">
-            {/* Fixed button to toggle sidebar */}
+           
             <button
-              className="fixed top-4 left-4 text-gray-500 hover:text-gray-600 z-10"
+              className="text-gray-500 hover:text-gray-600"
               onClick={toggleSidebar}
             >
               <svg
@@ -69,9 +59,10 @@ const HeaderComponent = () => {
           </div>
         </div>
         {/* Content Body */}
-
-        <h1 className="text-2xl font-semibold">Welcome to our website</h1>
-        <p>... Content goes here ...</p>
+        <div className="flex-1 overflow-auto p-6 bg-gray-100">
+          <h1 className="text-2xl font-semibold">Welcome to our website</h1>
+          <p>... Content goes here ...</p>
+        </div>
       </div>
     </div>
   );
