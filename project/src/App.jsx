@@ -8,6 +8,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage"; 
 import { CartProvider } from "./context/CartContext.jsx";
+import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/privacy" element={<PrivacyPolicyPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>

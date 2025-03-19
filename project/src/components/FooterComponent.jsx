@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import logo2 from '/logo2.svg';
 
 const FooterComponent = () => {
@@ -24,9 +25,9 @@ const FooterComponent = () => {
           <a className="my-3 block" href="/#">
             Help Center <span className="text-teal-600 text-xs p-1"></span>
           </a>
-          <a className="my-3 block" href="/#">
+          <Link to={"/privacy"} className="my-3 block" >
             Privacy Policy <span className="text-teal-600 text-xs p-1"></span>
-          </a>
+          </Link>
           <a className="my-3 block" href="/#">
             Conditions <span className="text-teal-600 text-xs p-1"></span>
           </a>
