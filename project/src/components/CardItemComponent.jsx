@@ -7,7 +7,9 @@ import productData from "../utilities/data.js";
 const CardItemComponent = () => {
   const { addToCart } = useCart();
   const { searchTerm } = useSearch(); // ✅ Access search term from Context
+ const {isCartOpen} = useCart();
 
+ 
   // ✅ Filter products using global search term
   const filteredProducts = productData.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase())
@@ -15,7 +17,7 @@ const CardItemComponent = () => {
 
   return (
     <div className="container mt-4">
-      <div className="row g-4 justify-content-center">
+      <div className= {`row g-4 justify-content-center ${isCartOpen? "-translate-x-60": "" }`}>
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
             <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">

@@ -17,7 +17,6 @@ const productData = [
 const CarouselComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
- 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === productData.length - 1 ? 0 : prev + 1));
   };
@@ -29,8 +28,7 @@ const CarouselComponent = () => {
 
   return (
     <div className="carousel-container">
-      
-      <div className="carousel">
+      <div className= "carousel" >
         <AnimatePresence mode="wait">
           {productData.map(
             (item, index) =>
