@@ -9,7 +9,6 @@ const HomePage = () => {
     <>
       <NavLayoutComponent />
       <CarouselComponent />
-      <AboutPage />
       <CardItemComponent />
       <FooterComponent />
     </>

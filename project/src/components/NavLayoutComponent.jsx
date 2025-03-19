@@ -9,19 +9,18 @@ const NavLayoutComponent = () => {
     <>
       <HeaderComponent />
       <div className="flex transition-all duration-300">
-        
-        <main className={`flex-1 p-4 transition-all duration-300 ${isCartOpen ? "mr-80" : ""}`}>
-         
-        </main>
+        <main
+          className={`flex-1 p-4 transition-all duration-300 ${
+            isCartOpen ? "mr-80" : ""
+          }`}
+        ></main>
 
-        
         <CartSidebarComponent />
 
-       
         {!isCartOpen && (
           <button
             onClick={toggleCart}
-            className="fixed top-40 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition"
+            className="fixed top-40 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition z-2"
           >
             🛒 Show Cart
           </button>
