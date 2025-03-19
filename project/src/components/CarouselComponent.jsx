@@ -29,6 +29,7 @@ const CarouselComponent = () => {
 
   return (
     <div className="carousel-container">
+      
       <div className="carousel">
         <AnimatePresence mode="wait">
           {productData.map(
