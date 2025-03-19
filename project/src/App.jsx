@@ -6,23 +6,24 @@ import ContactPage from "./pages/ContactPage";
 import ProductListPage from "./pages/ProductListPage";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import CheckoutPage from "./pages/CheckoutPage";
+import CheckoutPage from "./pages/CheckoutPage"; 
+import { CartProvider } from "./context/CartContext.jsx";
 
 function App() {
   return (
-    <>
+    <CartProvider>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/products" element={<ProductListPage />} />
-          <Route path="/products/:id" element={<ProductDetailsPage />} />  {/* Matches CardItemComponent */}
+          <Route path="/products/:id" element={<ProductDetailsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </CartProvider>
   );
 }
 

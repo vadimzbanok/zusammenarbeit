@@ -1,15 +1,10 @@
-import { useState } from "react";
+import { useCart } from "../context/CartContext.jsx";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import productData from "../utilities/data.js";
 
 const CardItemComponent = () => {
-  const [cart, setCart] = useState([]);
-
-  const addToCart = (product) => {
-    setCart([...cart, product]);
-   
-  };
+  const { addToCart } = useCart();
 
   return (
     <div className="container mt-4">
@@ -27,13 +22,23 @@ const CardItemComponent = () => {
               </div>
               <div className="card-body d-flex flex-column text-center">
                 <h5 className="card-title flex-grow-1">{item.title}</h5>
-                <p className="card-text">${item.price}</p>
+                <p className="card-text">${item.price.toFixed(2)}</p>
 
-                <button onClick={() => addToCart(item)} className="btn btn-success mb-2">
+                <button
+                  onClick={() =>
+                    addToCart({
+                      id: item.id,
+                      title: item.title,
+                      price: item.price,
+                      image: item.image,
+                    })
+                  }
+                  className="btn btn-success mb-2"
+                >
                   Add to Cart
                 </button>
 
-                {/* ✅ Updated Link to match App.jsx route */}
+                {/* ✅ Fix: Make "More Details" link go to the correct product details page */}
                 <Link to={`/products/${item.id}`} className="btn btn-primary">
                   More Details
                 </Link>
