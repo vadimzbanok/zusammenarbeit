@@ -10,6 +10,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import { CartProvider } from "./context/CartContext.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import { SearchProvider } from "./context/SearchContext.jsx"; // ✅ Import SearchContext
+import LoginPage from "./pages/LoginPage.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
+            <Route path="/login" element={<LoginPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>

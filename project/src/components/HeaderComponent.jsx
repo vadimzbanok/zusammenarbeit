@@ -64,6 +64,9 @@ const HeaderComponent = () => {
               <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
                 Contact
               </Link>
+              <Link to="/login" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
+                Login
+              </Link>
             </div>
           )}
         </div>
@@ -81,6 +84,9 @@ const HeaderComponent = () => {
           </Link>
           <Link to="/contact" className="text-white hover:text-2xl font-bold no-underline">
             Contact
+          </Link>
+          <Link to="/login" className="text-white hover:text-2xl font-bold no-underline">
+            Login
           </Link>
           <Link to="/checkout" className="relative text-white hover:text-indigo-400 no-underline">
             <svg
