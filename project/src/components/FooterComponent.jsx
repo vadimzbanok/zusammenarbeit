@@ -38,7 +38,7 @@ const FooterComponent = () => {
             <span className="text-teal-600 text-xs p-1"></span>
           </a>
           <a className="my-3 block" href="/#">
-            contact@company.com
+            contact@shopify.com
             <span className="text-teal-600 text-xs p-1"></span>
           </a>
         </div>
@@ -47,7 +47,7 @@ const FooterComponent = () => {
       <div className="bg-gray-100 pt-2">
         <div className="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
           <div className="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-            <a href="/#" className="w-6 mx-1">
+            <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" className="w-6 mx-1">
               <svg
                 className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
                 width="100%"
@@ -70,7 +70,8 @@ const FooterComponent = () => {
                 ></path>
               </svg>
             </a>
-            <a href="/#" className="w-6 mx-1">
+           
+            <a href="https://www.facebook.com/login/?next=https%3A%2F%2Fwww.facebook.com%2F" target="_blank" rel="noopener noreferrer" className="w-6 mx-1">
               <svg
                 className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
                 width="100%"
@@ -93,7 +94,7 @@ const FooterComponent = () => {
                 ></path>
               </svg>
             </a>
-            <a href="/#" className="w-6 mx-1">
+            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="w-6 mx-1">
               <svg
                 className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
                 width="100%"
@@ -120,29 +121,7 @@ const FooterComponent = () => {
                 </g>
               </svg>
             </a>
-            <a href="/#" className="w-6 mx-1">
-              <svg
-                className="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
-                width="100%"
-                height="100%"
-                viewBox="0 0 24 24"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlnsXlink="http://www.w3.org/1999/xlink"
-                xmlSpace="preserve"
-                style={{
-                  fillRule: 'evenodd',
-                  clipRule: 'evenodd',
-                  strokeLinejoin: 'round',
-                  strokeMiterlimit: 2,
-                }}
-              >
-                <path
-                  id="Combined-Shape"
-                  d="M12,24c6.627,0 12,-5.373 12,-12c0,-6.627 -5.373,-12 -12,-12c-6.627,0 -12,5.373 -12,12c0,6.627 5.373,12 12,12Zm6.591,-15.556l-0.722,0c-0.189,0 -0.681,0.208 -0.681,0.385l0,6.422c0,0.178 0.492,0.323 0.681,0.323l0.722,0l0,1.426l-4.675,0l0,-1.426l0.935,0l0,-6.655l-0.163,0l-2.251,8.081l-1.742,0l-2.222,-8.081l-0.168,0l0,6.655l0.935,0l0,1.426l-3.74,0l0,-1.426l0.519,0c0.203,0 0.416,-0.145 0.416,-0.323l0,-6.422c0,-0.177 -0.213,-0.385 -0.416,-0.385l-0.519,0l0,-1.426l4.847,0l1.583,5.704l0.042,0l1.598,-5.704l5.021,0l0,1.426Z"
-                ></path>
-              </svg>
-            </a>
+            
           </div>
           <div className="my-5">© Copyright 2020. All Rights Reserved.</div>
         </div>
