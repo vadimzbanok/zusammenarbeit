@@ -1,15 +1,15 @@
-import { useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 import productData from "../utilities/data.js";
 
 const CardItemComponent = () => {
-  const [data, setData] = useState([]);
+  const [cart, setCart] = useState([]);
 
-  useEffect(() => {
-    fetch(productData)
-      .then((response) => response.json())
-      .then((data) => setData(data));
-  }, []);
+  const addToCart = (product) => {
+    setCart([...cart, product]);
+   
+  };
 
   return (
     <div className="container mt-4">
@@ -28,9 +28,15 @@ const CardItemComponent = () => {
               <div className="card-body d-flex flex-column text-center">
                 <h5 className="card-title flex-grow-1">{item.title}</h5>
                 <p className="card-text">${item.price}</p>
-                <a href="#" className="btn btn-primary mt-auto">
-                  View Product
-                </a>
+
+                <button onClick={() => addToCart(item)} className="btn btn-success mb-2">
+                  Add to Cart
+                </button>
+
+                {/* ✅ Updated Link to match App.jsx route */}
+                <Link to={`/products/${item.id}`} className="btn btn-primary">
+                  More Details
+                </Link>
               </div>
             </div>
           </div>
