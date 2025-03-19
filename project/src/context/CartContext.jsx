@@ -13,7 +13,7 @@ export const CartProvider = ({ children }) => {
       if (existingItem) {
         return prevCart.map((cartItem) =>
           cartItem.id === item.id
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? { ...cartItem, quantity: (cartItem.quantity || 1) + 1 }
             : cartItem
         );
       } else {
@@ -21,11 +21,21 @@ export const CartProvider = ({ children }) => {
       }
     });
 
-    setIsCartOpen(true); // Open the cart when an item is added
+    setIsCartOpen(true);
+
+    setTimeout(() => {
+      setIsCartOpen(false);
+    }, 3000);
   };
 
   const removeFromCart = (id) => {
-    setCart(cart.filter((item) => item.id !== id));
+    setCart((prevCart) =>
+      prevCart
+        .map((item) =>
+          item.id === id ? { ...item, quantity: item.quantity - 1 } : item
+        )
+        .filter((item) => item.quantity > 0)
+    );
   };
 
   const toggleCart = () => {

@@ -3,21 +3,29 @@ import HeaderComponent from "./HeaderComponent";
 import CartSidebarComponent from "./CartSidebarComponent";
 
 const NavLayoutComponent = () => {
-  const { isCartOpen } = useCart();
+  const { toggleCart, isCartOpen } = useCart();
 
   return (
     <>
       <HeaderComponent />
-      {/* Flex container for main layout */}
       <div className="flex transition-all duration-300">
-        {/* Main content - Flexible and pushes left when cart is open */}
+        
         <main className={`flex-1 p-4 transition-all duration-300 ${isCartOpen ? "mr-80" : ""}`}>
-       
-     
+         
         </main>
 
-        {/* Cart Sidebar - Stays fixed and under header */}
+        
         <CartSidebarComponent />
+
+       
+        {!isCartOpen && (
+          <button
+            onClick={toggleCart}
+            className="fixed top-40 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition"
+          >
+            🛒 Show Cart
+          </button>
+        )}
       </div>
     </>
   );

@@ -50,3 +50,31 @@
 .transition-transform {
   transition: transform 0.4s ease-in-out;
 }
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .card {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .cart-sidebar {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cart-sidebar {
+    width: 320px;
+  }
+}
+.cart-open {
+  margin-right: 320px; 
+  transition: margin-right 0.3s ease-in-out;
+}

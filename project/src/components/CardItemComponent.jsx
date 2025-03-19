@@ -38,7 +38,7 @@ const CardItemComponent = () => {
                   Add to Cart
                 </button>
 
-                {/* ✅ Fix: Make "More Details" link go to the correct product details page */}
+                
                 <Link to={`/products/${item.id}`} className="btn btn-primary">
                   More Details
                 </Link>

@@ -12,10 +12,10 @@ const HeaderComponent = () => {
   return (
     <nav className="bg-blue-600 p-4">
       <div className="container mx-auto flex justify-between items-center">
-        {/* Logo */}
+        
         <img className="logo" src={logo} alt="Logo" />
 
-        {/* Search Field for Desktop */}
+       
         <div className="lg:flex items-center space-x-2">
           <input
             type="text"
@@ -24,7 +24,7 @@ const HeaderComponent = () => {
           />
         </div>
 
-        {/* Hamburger Icon for Mobile */}
+        
         <div className="lg:hidden flex items-center">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             <svg
@@ -39,7 +39,7 @@ const HeaderComponent = () => {
           </button>
         </div>
 
-        {/* Links and Cart Icon */}
+        
         <div className="hidden lg:flex items-center space-x-6">
           <Link to="/" className="text-white hover:text-2xl font-bold no-underline">
             Home
@@ -65,7 +65,7 @@ const HeaderComponent = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
+      
       <div className={`${isMenuOpen ? "block" : "hidden"} lg:hidden`}>
         <div className="flex flex-col items-center space-y-4 bg-blue-600 py-4">
           <Link to="/" className="text-white hover:text-2xl font-bold no-underline">
