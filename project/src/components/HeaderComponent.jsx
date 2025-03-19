@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "/logo.svg";
+import logo from "../../public/images/Online.png";
 import { useSearch } from "../context/SearchContext";
 
 const HeaderComponent = () => {
@@ -17,9 +17,9 @@ const HeaderComponent = () => {
   };
 
   return (
-    <nav className="bg-blue-600 p-4 fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav className="bg-blue-600 fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <img className="logo" src={logo} alt="Logo" />
+        <img className="h-30 w-25" src={logo} alt="Logo" />
 
         <div className="lg:flex items-center space-x-2">
           <input

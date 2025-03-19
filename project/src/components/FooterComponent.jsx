@@ -1,22 +1,22 @@
 import { Link } from 'react-router-dom';
-import logo2 from '/logo2.svg';
+import logo from "../../public/images/Online-shop-black.png";
 
 const FooterComponent = () => {
   return (
     <footer className="bg-gray-100 text-gray-800 text-center">
       <div className="max-w-screen-lg mx-auto px-6 py-8 grid md:grid-cols-3 sm:grid-cols-1 gap-6 text-center">
         <div className="flex justify-center">
-          <img className="w-32" src={logo2} alt="logo2" />
+           <img className="h-30 w-55" src={logo} alt="Logo" />
         </div>
         
         <div>
-          <h3 className="text-indigo-600 font-bold uppercase text-sm mb-2">Policies</h3>
+          <h3 className="text-black font-bold uppercase text-sm mb-2">Policies</h3>
           <Link to="/privacy" className="block hover:text-indigo-600 no-underline">Privacy Policy</Link>
           <a href="/#" className="block hover:text-indigo-600 no-underline">Conditions</a>
         </div>
         
         <div>
-          <h3 className="text-indigo-600 font-bold uppercase text-sm mb-2">Contact Us</h3>
+          <h3 className="text-black font-bold uppercase text-sm mb-2">Contact Us</h3>
           <p>Berlin, Hauptstraße 25, DCI Quarters</p>
           <p>contact@shopify.com</p>
         </div>
