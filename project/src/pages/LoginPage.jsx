@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
+import login from "../../public/images/login.png";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -26,6 +27,9 @@ const LoginPage = () => {
     <>
      <HeaderComponent />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <div className="w-1/4 pr-2 mr-2 ">
+          <img src={login} alt="Login" className="rounded-xl w-[100%] h-[100]" />
+        </div>
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
         <h2 className="text-2xl font-semibold text-center text-gray-700 mb-6">Login</h2>
         {error && (
