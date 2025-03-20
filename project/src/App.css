@@ -1,5 +1,6 @@
 @import "https://fonts.googleapis.com/css?family=Raleway";
-@import url('https://fonts.googleapis.com/css2?family=Emblema+One&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Montserrat:wght@700;900&display=swap");
 
 /* 
 #root {
@@ -39,7 +40,7 @@
 .read-the-docs {
   color: #888;
 } */
- 
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -75,12 +76,11 @@
   }
 }
 .cart-open {
-  margin-right: 320px; 
+  margin-right: 320px;
   transition: margin-right 0.3s ease-in-out;
 }
 
 /*not found Page Style*/
-@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Montserrat:wght@700;900&display=swap");
 
 body {
   padding: 0;
@@ -89,7 +89,7 @@ body {
 }
 
 #notfound {
-  background-color: rgb(53, 82, 212) ;
+  background-color: rgb(53, 82, 212);
   position: relative;
   height: 100vh;
 }
@@ -196,3 +196,11 @@ body {
   background-color: #444;
   transform: scale(1.1);
 }
+
+/*header links font & size*/
+
+.links {
+  font-size: 1.2em;
+  font-family: "Raleway", sans-serif;
+}
+
