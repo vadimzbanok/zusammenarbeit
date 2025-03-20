@@ -64,15 +64,15 @@ const LoginPage = () => {
 
           <button
             type="submit"
-            className="w-full p-3 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full p-3 bg-blue-500 rounded-lg shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-           <Link to="/">Login</Link> 
+           <Link to="/" className="no-underline text-white">Login</Link> 
           </button>
         </form>
 
         <p className="text-center text-gray-600 mt-4">
           Don't have an account?{" "}
-          <a href="/signup" className="text-blue-500 hover:text-blue-700">Sign Up</a>
+          <a href="/signup" className="text-blue-500 hover:text-blue-700 no-underline">Sign Up</a>
         </p>
       </div>
     </div>
