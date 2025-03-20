@@ -14,7 +14,7 @@ const LoginPage = () => {
 
     
     if (!email || !password) {
-      setError("Bitte fülle alle Felder aus!");
+      setError("Please fill all the fields");
       return;
     }
 
