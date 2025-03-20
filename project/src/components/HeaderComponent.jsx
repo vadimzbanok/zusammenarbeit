@@ -21,12 +21,12 @@ const HeaderComponent = () => {
       <div className="container mx-auto flex justify-between items-center">
         <img className="h-30 w-25" src={logo} alt="Logo" />
 
-        <div className="lg:flex items-center space-x-2">
+        <div className="lg:flex items-center">
           <input
             type="text"
-            placeholder="Search products..."
+            placeholder="Search for products..."
             onChange={handleSearch}
-            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            className="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none "
           />
         </div>
 
@@ -73,19 +73,19 @@ const HeaderComponent = () => {
 
         
         <div className="hidden lg:flex items-center space-x-6">
-          <Link to="/" className="text-white hover:text-2xl font-bold no-underline">
+          <Link to="/" className="text-white hover:scale-150 transition-all duration-300 ease-in-out font-bold no-underline">
             Home
           </Link>
-          <Link to="/products" className="text-white hover:text-2xl font-bold no-underline">
+          <Link to="/products" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
             Shop
           </Link>
-          <Link to="/about" className="text-white hover:text-2xl font-bold no-underline">
+          <Link to="/about" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
             About
           </Link>
-          <Link to="/contact" className="text-white hover:text-2xl font-bold no-underline">
+          <Link to="/contact" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
             Contact
           </Link>
-          <Link to="/login" className="text-white hover:text-2xl font-bold no-underline">
+          <Link to="/login" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
             Login
           </Link>
           <Link to="/checkout" className="relative text-white hover:text-indigo-400 no-underline">
