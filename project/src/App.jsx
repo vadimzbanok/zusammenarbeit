@@ -9,13 +9,13 @@ import NotFoundPage from "./pages/NotFoundPage";
 import CheckoutPage from "./pages/CheckoutPage"; 
 import { CartProvider } from "./context/CartContext.jsx";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
-import { SearchProvider } from "./context/SearchContext.jsx"; // ✅ Import SearchContext
+import { SearchProvider } from "./context/SearchContext.jsx"; 
 import LoginPage from "./pages/LoginPage.jsx";
 
 function App() {
   return (
     <CartProvider>
-      <SearchProvider> {/* ✅ Wrap the app with SearchProvider */}
+      <SearchProvider> 
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage />} />

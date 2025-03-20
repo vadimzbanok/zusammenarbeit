@@ -50,7 +50,7 @@
 .transition-transform {
   transition: transform 0.4s ease-in-out;
 }
-@media (max-width: 768px) {
+@media (max-width: 700px) {
   .container {
     padding: 10px;
   }

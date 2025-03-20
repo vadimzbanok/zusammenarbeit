@@ -15,7 +15,7 @@ const CheckoutPage = () => {
         <p className="text-center mt-3">Your cart is empty.</p>
       ) : (
         <div className="mt-4">
-          {/* ✅ Cart Items with Quantity */}
+         
           {cart.map((item, index) => (
             <div key={index} className="d-flex justify-content-between align-items-center border-bottom py-2">
               <span className="fw-bold">{item.title}</span>
@@ -27,7 +27,7 @@ const CheckoutPage = () => {
             </div>
           ))}
 
-          {/* ✅ Payment Method Selection */}
+          
           <h4 className="mt-4">Payment Method</h4>
           <div className="mt-2">
             <label className="d-block">
@@ -62,10 +62,10 @@ const CheckoutPage = () => {
             </label>
           </div>
 
-          {/* ✅ Total Price */}
+         
           <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
-          {/* ✅ Proceed to Payment Button */}
+          
           <button className="btn btn-primary w-100 mt-3">
             Proceed to Payment
           </button>

@@ -71,7 +71,7 @@ const HeaderComponent = () => {
           )}
         </div>
 
-        {/* Desktop Navigation */}
+        
         <div className="hidden lg:flex items-center space-x-6">
           <Link to="/" className="text-white hover:text-2xl font-bold no-underline">
             Home
