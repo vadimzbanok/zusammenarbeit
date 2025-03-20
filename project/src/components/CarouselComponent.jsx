@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useCart } from "../context/CartContext.jsx";
 
 const productData = [
   { id: 1, image: "./images/carousel/1.jpg" },
@@ -16,6 +17,7 @@ const productData = [
 
 const CarouselComponent = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const { isCartOpen } = useCart();
 
   const nextSlide = () => {
     setCurrentIndex((prev) => (prev === productData.length - 1 ? 0 : prev + 1));
@@ -27,8 +29,12 @@ const CarouselComponent = () => {
   }, [currentIndex]);
 
   return (
-    <div className="carousel-container">
-      <div className= "carousel" >
+    <motion.div
+      className="carousel-container"
+      animate={{ x: isCartOpen ? -144 : 0 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
+    >
+      <div className="carousel">
         <AnimatePresence mode="wait">
           {productData.map(
             (item, index) =>
@@ -36,7 +42,7 @@ const CarouselComponent = () => {
                 <motion.div
                   key={item.id}
                   initial={{ opacity: 0, scale: 0.8, x: 100 }}
-                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                  animate={{ opacity: 1, scale: isCartOpen ? 0.7 : 1, x: 0 }}
                   exit={{ opacity: 0, scale: 0.8, x: -100 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                 >
@@ -73,17 +79,14 @@ const CarouselComponent = () => {
           max-width: 1000px;
         }
 
-        
-
         .carousel-img {
-        
           max-width: 900px;
           height: auto;
           object-fit: cover;
           border-radius: 12px;
         }
       `}</style>
-    </div>
+    </motion.div>
   );
 };
 

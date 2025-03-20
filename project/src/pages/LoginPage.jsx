@@ -11,7 +11,7 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Hier kannst du deine Login-Logik einfügen
+    
     if (!email || !password) {
       setError("Bitte fülle alle Felder aus!");
       return;
@@ -19,7 +19,7 @@ const LoginPage = () => {
 
     setError("");
     console.log("Login attempt", { email, password });
-    // Füge hier deine Logik für die Authentifizierung hinzu
+    
   };
 
   return (
