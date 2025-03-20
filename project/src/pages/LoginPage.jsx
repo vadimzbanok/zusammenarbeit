@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FooterComponent from "../components/FooterComponent";
 import HeaderComponent from "../components/HeaderComponent";
-import login from "../../public/images/login.png";
+import login from "../../public/images/login.jpg";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
