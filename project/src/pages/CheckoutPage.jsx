@@ -67,7 +67,7 @@ const CheckoutPage = () => {
           <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
          
-          <button className="btn btn-primary w-100 mt-3">
+          <button className="btn btn-primary w-100 mt-3" onClick={() => alert(message)}>
             Proceed to Payment
           </button>
         </div>
