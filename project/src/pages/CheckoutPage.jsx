@@ -6,6 +6,7 @@ const CheckoutPage = () => {
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const message = `Tank you for your order. Your total is $${totalPrice.toFixed(2)}.`;
 
   return (
     <div className="container mt-5">
@@ -66,7 +67,7 @@ const CheckoutPage = () => {
           <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
           {/* ✅ Proceed to Payment Button */}
-          <button className="btn btn-primary w-100 mt-3">
+          <button className="btn btn-primary w-100 mt-3" onClick={() => alert(message)}>
             Proceed to Payment
           </button>
         </div>
