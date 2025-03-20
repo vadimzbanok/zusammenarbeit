@@ -72,7 +72,7 @@ const HeaderComponent = () => {
         </div>
 
         
-        <div className="hidden lg:flex items-center space-x-6">
+        <div className="hidden lg:flex items-center space-x-6 links">
           <Link to="/" className="text-white hover:scale-150 transition-all duration-300 ease-in-out font-bold no-underline">
             Home
           </Link>
