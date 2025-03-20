@@ -48,9 +48,11 @@ const CardItemComponent = () => {
         {filteredProducts.length > 0 ? (
           filteredProducts.map((item) => (
             <div key={item.id} className="col-12 col-sm-6 col-md-4 col-lg-3 d-flex">
-              <div
+              <motion.div
                 className="card d-flex flex-column w-100 h-100"
                 style={{ minHeight: "350px" }}
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 <div
                   className="d-flex justify-content-center align-items-center"
@@ -83,7 +85,7 @@ const CardItemComponent = () => {
                     More Details
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             </div>
           ))
         ) : (
@@ -92,7 +94,7 @@ const CardItemComponent = () => {
       </motion.div>
 
       {showScroll && (
-        <button
+        <motion.button
           onClick={scrollToTop}
           style={{
             position: "fixed",
@@ -102,14 +104,16 @@ const CardItemComponent = () => {
             color: "#fff",
             borderRadius: "50%",
             border: "none",
-            padding: "10px",
+            padding: "12px",
             cursor: "pointer",
-            boxShadow: "0px 4px 8px rgba(0,0,0,0.2)",
+            boxShadow: "0px 4px 8px rgba(0,0,0,0.3)",
             zIndex: 1000,
           }}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.9 }}
         >
           <ArrowUp />
-        </button>
+        </motion.button>
       )}
     </div>
   );
