@@ -6,7 +6,7 @@ const FooterComponent = () => {
     <footer className="bg-gray-100 text-gray-800 text-center">
       <div className="max-w-screen-lg mx-auto px-6 py-8 grid md:grid-cols-3 sm:grid-cols-1 gap-6 text-center">
         <div className="flex justify-center">
-           <img className="h-30 w-55" src={logo} alt="Logo" />
+           <a href="#"><img className="h-40" src={logo} alt="Logo" /></a>
         </div>
         
         <div>

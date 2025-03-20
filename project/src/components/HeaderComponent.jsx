@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../public/images/Online.png";
 import { useSearch } from "../context/SearchContext";
+import logo from "../../public/images/Online.png";
 
 const HeaderComponent = () => {
   const { setSearchTerm } = useSearch();
@@ -19,7 +19,8 @@ const HeaderComponent = () => {
   return (
     <nav className="bg-blue-600 sticky top-0 left-0 w-full z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <img className="h-30 w-25" src={logo} alt="Logo" />
+        <a href="#"><img className="h-40" src={logo} alt="Logo" /></a>
+        
 
         <div className="lg:flex items-center">
           <input
