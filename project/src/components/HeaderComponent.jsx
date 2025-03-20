@@ -19,7 +19,7 @@ const HeaderComponent = () => {
   return (
     <nav className="bg-blue-600 sticky top-0 left-0 w-full z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#"><img className="h-40" src={logo} alt="Logo" /></a>
+        <a href="/"><img className="h-40" src={logo} alt="Logo" /></a>
         
 
         <div className="lg:flex items-center">
