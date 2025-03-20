@@ -26,8 +26,8 @@ const LoginPage = () => {
   return (
     <>
      <HeaderComponent />
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
-      <div className="w-1/4 pr-2 mr-2 ">
+    <div className="flex justify-center items-center m-4 bg-blue-60">
+      <div className="w-1/3 pr-2 mr-4 ">
           <img src={login} alt="Login" className="rounded-xl w-[100%] h-[100]" />
         </div>
       <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
