@@ -1,5 +1,7 @@
 import { useCart } from "../context/CartContext.jsx";
 import { useState } from "react";
+import HeaderComponent from "../components/HeaderComponent";
+import FooterComponent from "../components/FooterComponent.jsx";
 
 const CheckoutPage = () => {
   const { cart, removeFromCart } = useCart();
@@ -9,7 +11,9 @@ const CheckoutPage = () => {
   const message = `Tank you for your order. Your total is $${totalPrice.toFixed(2)}.`;
 
   return (
-    <div className="container mt-5">
+    <>
+    <HeaderComponent />
+    <div className="container mt-5 mb-5">
       <h2 className="text-center">Checkout</h2>
 
       {cart.length === 0 ? (
@@ -67,12 +71,14 @@ const CheckoutPage = () => {
           <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
          
-          <button className="btn btn-primary w-100 mt-3">
+          <button className="btn btn-primary w-100 mt-3" onClick={() => alert(message)}>
             Proceed to Payment
           </button>
         </div>
       )}
     </div>
+    <FooterComponent />
+    </>
   );
 };
 
