@@ -6,7 +6,7 @@ const ContactPage = () => {
   return (
     <>
       <HeaderComponent />
-      <div className="flex items-center justify-center bg-blue-60 ">
+      <div className="flex items-center justify-center bg-blue-60 m-4 ">
       <div className="w-1/4 pr-2 mr-2 ">
           <img src={about} alt="Contact Us" className="rounded-xl w-[100%] h-[100]" />
         </div>
