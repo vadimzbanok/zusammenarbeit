@@ -9,7 +9,7 @@ const HeaderComponent = () => {
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
-    console.log("Menu Open:", !isMenuOpen); // Debugging
+    console.log("Menu Open:", !isMenuOpen); 
   };
 
   const handleSearch = (e) => {
@@ -17,7 +17,7 @@ const HeaderComponent = () => {
   };
 
   return (
-    <nav className="bg-blue-600 fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav className="bg-blue-600 sticky top-0 left-0 w-full z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         <img className="h-30 w-25" src={logo} alt="Logo" />
 
@@ -30,7 +30,7 @@ const HeaderComponent = () => {
           />
         </div>
 
-        {/* Mobile Menu Button */}
+        
         <div className="lg:hidden flex items-center relative z-50">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             <svg
@@ -49,7 +49,7 @@ const HeaderComponent = () => {
             </svg>
           </button>
 
-          {/* Dropdown Menu */}
+          
           {isMenuOpen && (
             <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2">
               <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
