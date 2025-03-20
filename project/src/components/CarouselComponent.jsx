@@ -10,6 +10,9 @@ const productData = [
   { id: 4, image: "./images/carousel/4.jpg" },
   { id: 5, image: "./images/carousel/5.jpg" },
   { id: 6, image: "./images/carousel/6.png" },
+  { id: 7, image: "./images/carousel/7.png" },
+  { id: 8, image: "./images/carousel/8.png" },
+  { id: 9, image: "./images/carousel/9.png" },
 ];
 
 const CarouselComponent = () => {
