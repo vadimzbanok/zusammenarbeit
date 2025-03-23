@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSearch } from "../context/SearchContext";
 import logo from "../../public/images/Online.png";
+import { FaHome, FaShoppingBag, FaInfoCircle, FaEnvelope, FaSignInAlt, FaShoppingCart } from "react-icons/fa";
+import { HiMenuAlt3 } from "react-icons/hi";
 
 const HeaderComponent = () => {
   const { setSearchTerm } = useSearch();
@@ -21,7 +23,6 @@ const HeaderComponent = () => {
       <div className="container mx-auto flex justify-between items-center">
         <a href="/"><img className="h-40" src={logo} alt="Logo" /></a>
         
-
         <div className="lg:flex items-center">
           <input
             type="text"
@@ -31,81 +32,50 @@ const HeaderComponent = () => {
           />
         </div>
 
-        
         <div className="lg:hidden flex items-center relative z-50">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            <HiMenuAlt3 size={24} />
           </button>
 
-          
           {isMenuOpen && (
             <div className="absolute top-full right-0 mt-2 w-48 bg-white shadow-lg rounded-lg p-2">
               <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
-                Home
+                <FaHome className="inline mr-2" /> Home
               </Link>
               <Link to="/products" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
-                Shop
+                <FaShoppingBag className="inline mr-2" /> Shop
               </Link>
               <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
-                About
+                <FaInfoCircle className="inline mr-2" /> About
               </Link>
               <Link to="/contact" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
-                Contact
+                <FaEnvelope className="inline mr-2" /> Contact
               </Link>
               <Link to="/login" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
-                Login
+                <FaSignInAlt className="inline mr-2" /> Login
               </Link>
             </div>
           )}
         </div>
 
-        
         <div className="hidden lg:flex items-center space-x-6 links">
-          <Link to="/" className="text-white hover:scale-150 transition-all duration-300 ease-in-out font-bold no-underline">
-            Home
+          <Link to="/" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaHome className="inline mr-2" /> Home
           </Link>
-          <Link to="/products" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
-            Shop
+          <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaShoppingBag className="inline mr-2" /> Shop
           </Link>
-          <Link to="/about" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
-            About
+          <Link to="/about" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaInfoCircle className="inline mr-2 text-lime-500" /> About
           </Link>
-          <Link to="/contact" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
-            Contact
+          <Link to="/contact" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaEnvelope className="inline mr-2" /> Contact
           </Link>
-          <Link to="/login" className="text-white hover:scale-150  transition-all duration-300 ease-in-out font-bold no-underline">
-            Login
+          <Link to="/login" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaSignInAlt className="inline mr-2" /> Login
           </Link>
           <Link to="/checkout" className="relative text-white hover:text-indigo-400 no-underline">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M3 3h18l-1.68 8.39a2 2 0 01-1.97 1.61H7.65a2 2 0 01-1.97-1.61L4 3H3z"
-              />
-              <circle cx="9" cy="21" r="1" />
-              <circle cx="20" cy="21" r="1" />
-            </svg>
+            <FaShoppingCart size={20} className="text-red-500"/>
           </Link>
         </div>
       </div>

@@ -18,13 +18,13 @@ const FooterComponent = () => {
         <div>
           <h3 className="text-black font-bold uppercase text-sm mb-2">Contact Us</h3>
           <p>Berlin, Hauptstraße 25, DCI Quarters</p>
-          <p>contact@shopify.com</p>
+          <p>contact@online-shop.com</p>
         </div>
       </div>
       
       <div className="border-t pt-4">
         <div className="flex flex-col items-center space-y-4 max-w-screen-lg mx-auto px-6">
-          <p className="text-sm">© Copyright 2020. All Rights Reserved.</p>
+          <p className="text-sm">© Copyright 2025. All Rights Reserved.</p>
           <div className="flex space-x-4 justify-center">
             <a href="https://x.com/?lang=en" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-indigo-600">
               <i className="fab fa-twitter text-xl"></i>

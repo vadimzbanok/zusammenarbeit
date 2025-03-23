@@ -129,9 +129,9 @@ const PrivacyPolicyPage = () => {
             practices, please contact us at:
           </p>
           <address className="text-gray-700">
-            Email: <strong>support@shopify.com</strong>
+            Email: <strong>support@onlineshop.com</strong>
             <br />
-            Address: 123 Shop St, E-Commerce City, XYZ
+            Address: Hauptstraße Berlin, DCI Quarters
           </address>
         </section>
       </div>

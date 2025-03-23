@@ -20,7 +20,7 @@ const NavLayoutComponent = () => {
         {!isCartOpen && (
           <button
             onClick={toggleCart}
-            className="fixed top-40 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-700 transition z-2"
+            className="fixed top-40 right-6 bg-blue-600 text-white px-4 mt-5 py-2 rounded-full shadow-lg hover:bg-blue-700 transition z-2"
           >
             🛒 Show Cart
           </button>
