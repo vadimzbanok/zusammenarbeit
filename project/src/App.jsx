@@ -11,6 +11,7 @@ import CheckoutPage from "./pages/CheckoutPage";
 import PrivacyPolicyPage from "./pages/PrivacyPolicyPage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import NotFoundPage from "./pages/NotFoundPage";
+import ConditionsComponent from "./pages/ConditionsComponent.jsx";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
             <Route path="/checkout" element={<CheckoutPage />} />
             <Route path="/privacy" element={<PrivacyPolicyPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/conditions" element={<ConditionsComponent />} />
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </BrowserRouter>

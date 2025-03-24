@@ -12,7 +12,7 @@ const FooterComponent = () => {
         <div>
           <h3 className="text-black font-bold uppercase text-sm mb-2">Policies</h3>
           <Link to="/privacy" className="block hover:text-indigo-600 no-underline">Privacy Policy</Link>
-          <a href="/#" className="block hover:text-indigo-600 no-underline">Conditions</a>
+          <Link to="/conditions" className="block hover:text-indigo-600 no-underline">Conditions</Link>
         </div>
         
         <div>
