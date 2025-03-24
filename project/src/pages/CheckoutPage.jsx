@@ -7,8 +7,13 @@ const CheckoutPage = () => {
   const { cart, removeFromCart } = useCart();
   const [paymentMethod, setPaymentMethod] = useState("credit-card");
 
-  const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-  const message = `Thank you for your order. Your total is $${totalPrice.toFixed(2)}.`;
+  const totalPrice = cart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+  const message = `Thank you for your order. Your total is $${totalPrice.toFixed(
+    2
+  )}.`;
 
   return (
     <>
@@ -21,7 +26,10 @@ const CheckoutPage = () => {
         ) : (
           <div className="mt-4">
             {cart.map((item, index) => (
-              <div key={index} className="d-flex justify-content-between border-bottom py-3">
+              <div
+                key={index}
+                className="d-flex justify-content-between border-bottom py-3"
+              >
                 {/* Column Layout for Each Item */}
                 <div className="d-flex flex-column align-items-center w-25">
                   <span className="fw-bold">{item.title}</span>
@@ -30,10 +38,15 @@ const CheckoutPage = () => {
                   <span className="text-muted">Qty: {item.quantity}</span>
                 </div>
                 <div className="d-flex flex-column align-items-center w-25">
-                  <span className="text-success">${(item.price * item.quantity).toFixed(2)}</span>
+                  <span className="text-success">
+                    ${(item.price * item.quantity).toFixed(2)}
+                  </span>
                 </div>
                 <div className="d-flex flex-column align-items-center w-25">
-                  <button onClick={() => removeFromCart(item.id)} className="btn btn-danger btn-sm">
+                  <button
+                    onClick={() => removeFromCart(item.id)}
+                    className="btn btn-danger btn-sm"
+                  >
                     Remove
                   </button>
                 </div>
@@ -76,9 +89,14 @@ const CheckoutPage = () => {
 
             <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
-            <button className="btn btn-primary w-100 mt-3" onClick={() => alert(message)}>
-              Proceed to Payment
-            </button>
+            <div className="flex justify-center">
+              <button
+                className="btn btn-primary w-[15%] mt-3"
+                onClick={() => alert(message)}
+              >
+                Proceed to Payment
+              </button>
+            </div>
           </div>
         )}
       </div>
