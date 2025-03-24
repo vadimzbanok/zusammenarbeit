@@ -75,7 +75,7 @@ const HeaderComponent = () => {
             <FaSignInAlt className="inline mr-2" /> Login
           </Link>
           <Link to="/checkout" className="relative text-white hover:text-indigo-400 no-underline">
-            <FaShoppingCart size={20} className="text-red-500"/>
+            <FaShoppingCart size={20} className="text-lime-500"/>
           </Link>
         </div>
       </div>
