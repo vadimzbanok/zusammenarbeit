@@ -89,14 +89,12 @@ const CheckoutPage = () => {
 
             <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
-            <div className="flex justify-center">
-              <button
-                className="btn btn-primary w-[15%] mt-3"
-                onClick={() => alert(message)}
-              >
-                Proceed to Payment
-              </button>
-            </div>
+            <button className="btn btn-primary w-100 mt-3" onClick={() => (paymentMethod === "cash" ? alert(message) :
+              paymentMethod === "credit-card" ? alert(message) :
+              paymentMethod === "paypal" &&
+              window.open("https://www.paypal.com", "_blank") || null)}>
+              Proceed to Payment
+            </button>
           </div>
         )}
       </div>
