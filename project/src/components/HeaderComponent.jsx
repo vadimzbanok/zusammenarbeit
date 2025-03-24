@@ -62,9 +62,15 @@ const HeaderComponent = () => {
           <Link to="/" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
             <FaHome className="inline" /> Home
           </Link>
+<<<<<<< HEAD
           {/* <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
             <FaShoppingBag className="inline mr-2" /> Shop
           </Link> */}
+=======
+          <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaShoppingBag className="inline" /> Shop
+          </Link>
+>>>>>>> 651859e9c926cc63d9143d6e237c1e9e4000da4d
           <Link to="/about" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
             <FaInfoCircle className="inline text-lime-500" /> About
           </Link>
