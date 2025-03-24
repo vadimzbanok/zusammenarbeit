@@ -70,10 +70,14 @@ const CheckoutPage = () => {
          
           <h4 className="mt-3 text-end">Total: ${totalPrice.toFixed(2)}</h4>
 
-         
-          <button className="btn btn-primary w-100 mt-3" onClick={() => alert(message)}>
+          <div className="w-full flex justify-center items-center">
+            <button className="btn btn-primary w-[20%] flex items-center mt-3" onClick={() => alert(message)}>
             Proceed to Payment
           </button>
+          </div>
+
+         
+          
         </div>
       )}
     </div>
