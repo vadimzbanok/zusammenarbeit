@@ -60,22 +60,22 @@ const HeaderComponent = () => {
 
         <div className="hidden lg:flex items-center space-x-6 links">
           <Link to="/" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaHome className="inline mr-2" /> Home
+            <FaHome className="inline" /> Home
           </Link>
           <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaShoppingBag className="inline mr-2" /> Shop
+            <FaShoppingBag className="inline" /> Shop
           </Link>
           <Link to="/about" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaInfoCircle className="inline mr-2 text-lime-500" /> About
+            <FaInfoCircle className="inline text-lime-500" /> About
           </Link>
           <Link to="/contact" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaEnvelope className="inline mr-2" /> Contact
+            <FaEnvelope className="inline " /> Contact
           </Link>
           <Link to="/login" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaSignInAlt className="inline mr-2" /> Login
+            <FaSignInAlt className="inline" /> Login
           </Link>
           <Link to="/checkout" className="relative text-white hover:text-indigo-400 no-underline">
-            <FaShoppingCart size={20} className="text-red-500"/>
+            <FaShoppingCart size={20} className="text-lime-500"/>
           </Link>
         </div>
       </div>
