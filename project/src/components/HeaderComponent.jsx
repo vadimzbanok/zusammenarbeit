@@ -26,7 +26,7 @@ const HeaderComponent = () => {
   return (
     <nav className="bg-blue-600 sticky top-0 left-0 w-full z-50 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="/"><img className="h-40" src={logo} alt="Logo" /></a>
+        <a href="/"><img className="h-40 d-none d-md-block" src={logo} alt="Logo" /></a>
         
         <div className="lg:flex items-center">
           <input
@@ -37,7 +37,7 @@ const HeaderComponent = () => {
           />
         </div>
 
-        <div className="lg:hidden flex items-center relative z-50">
+        <div className="lg:hidden flex items-center relative z-50 ml-3">
           <button onClick={toggleMenu} className="text-white focus:outline-none">
             <HiMenuAlt3 size={24} />
           </button>
@@ -47,9 +47,9 @@ const HeaderComponent = () => {
               <Link to="/" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
                 <FaHome className="inline mr-2" /> Home
               </Link>
-              <Link to="/products" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
+              {/* <Link to="/products" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
                 <FaShoppingBag className="inline mr-2" /> Shop
-              </Link>
+              </Link> */}
               <Link to="/about" className="block px-4 py-2 text-gray-700 hover:bg-gray-100 no-underline">
                 <FaInfoCircle className="inline mr-2" /> About
               </Link>
@@ -75,9 +75,9 @@ const HeaderComponent = () => {
           <Link to="/" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
             <FaHome className="inline" /> Home
           </Link>
-          <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
-            <FaShoppingBag className="inline" /> Shop
-          </Link>
+          {/* <Link to="/products" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
+            <FaShoppingBag className="inline mr-2" /> Shop
+          </Link> */}
           <Link to="/about" className="text-white hover:scale-125 transition-all duration-200 ease-in-out font-bold no-underline">
             <FaInfoCircle className="inline text-lime-500" /> About
           </Link>
